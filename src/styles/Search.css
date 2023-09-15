@@ -1,0 +1,41 @@
+.inputGroup {
+    margin: 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    float: right;
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+    border-color: rgb(150, 150, 200);
+  }
+ 
+  .Sbtn {
+    margin-left: 5px;
+    border-radius: 20px;
+  }
+
+
+
+  .searchResult {
+    position: absolute;
+    width: 50%;
+    right: 20px;
+    top: 80px;
+    overflow: auto;
+    height: auto;
+    color: #000;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }

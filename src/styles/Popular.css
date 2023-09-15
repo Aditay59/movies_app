@@ -1,0 +1,36 @@
+
+body {
+    margin:0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.MoviesContainer {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+}
+
+.movieDiv {
+    margin: 10px;
+}
+
+.Title {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.Tlink {
+    text-decoration: none;
+    color: #000;
+}
+
+.Title:hover {
+    color: rgb(32, 112, 240);
+}
+
+.Pimg {
+    border-radius: 10px;
+    cursor: pointer;
+}
