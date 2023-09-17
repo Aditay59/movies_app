@@ -18,7 +18,7 @@ const TodaysTrendingTv = () => {
     
 
   return (
-    <>
+    <div className="model">
     <h3> {`Today's Trending Tv Shows`} </h3>
 
     <div className="MoviesContainer">
@@ -31,13 +31,19 @@ const TodaysTrendingTv = () => {
                 <Link to={`/tv/${item.id}`}> <img className="Pimg" src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt="poster" height={230} width={150} /> </Link>
                 <Link to={`/tv/${item.id}`} className="Tlink"> <h5 className="Title">{item.name}</h5> </Link>
                 <p>{item.first_air_date}</p>
+
+                <div className="progress-bar" style={{ border: `4px solid ${item.vote_average*10 <= 50 ? 'red' : item.vote_average*10 <= 70 ? 'yellow' : item.vote_average*10<=95 ? 'greenyellow' : "green"}` }} >
+                     <span> {Math.floor(item.vote_average * 10)}<span className="percent"> <sup>%</sup> </span></span> 
+                
+                </div>
+
             </div> 
 
         )) : <div>Loading</div>
     }
     </div>
 
-    </>
+    </div>
   )
 }
 

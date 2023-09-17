@@ -16,7 +16,7 @@ const TopRated = () => {
     },[]);
 
   return (
-    <>
+    <div className="model">
     <h3>Top Rated Movies</h3>
 
     <div className="MoviesContainer">
@@ -29,13 +29,19 @@ const TopRated = () => {
                 <Link to={`/${item.id}`}> <img className="Pimg" src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt="poster" height={230} width={150} /> </Link>
                 <Link to={`/${item.id}`} className="Tlink"> <h5 className="Title">{item.title}</h5> </Link>
                 <p>{item.release_date}</p>
+
+                <div className="progress-bar" style={{ border: `4px solid ${item.vote_average*10 <= 50 ? 'red' : item.vote_average*10 <= 70 ? 'yellow' : 'greenyellow'}` }} >
+                     <span> {item.vote_average * 10}<span className="percent"> <sup>%</sup> </span></span> 
+                
+                </div>
+
             </div>
         )) : <div>Loading....</div>
       
     }
     </div>
 
-    </>
+    </div>
   )
 }
 

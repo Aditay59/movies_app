@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import '../styles/Banner.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const BannerCrousel = () => {
 

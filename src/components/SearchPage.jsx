@@ -21,14 +21,14 @@ const SearchPage = () => {
   return (
     <>
     {
-      searchedMovies ?
+      searchedMovies ? 
 
       searchedMovies.map((item,index)=>(
         <div key={index}>
            <Link to={`/${item.id}`} > <img src={`https://image.tmdb.org/t/p/original${item.poster_path}`} width={150} height={200} alt='poster' /> </Link>
             <h5> {item.title} </h5>
         </div>
-      )) : <div>Loading...</div>
+      )) : <div>Loading... or Movie Not found</div>
     }
     </>
   )
