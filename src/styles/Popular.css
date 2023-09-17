@@ -20,6 +20,11 @@ body{
 
 .movieDiv {
     margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.movieDiv:hover .Pimg {
+    transform: scale(1.03);
 }
 
 .movieDiv p {
@@ -46,6 +51,7 @@ body{
 .Pimg {
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .details {

@@ -1,0 +1,22 @@
+.SearchContainer {
+    padding: 40px;
+    width: 100vw;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.singleItem h5 {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 800;
+    width: 200px;
+}
+
+.posterImg {
+    border-radius: 10px;
+}

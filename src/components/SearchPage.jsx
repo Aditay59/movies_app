@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import '../styles/SearchPage.css';
 
 const SearchPage = () => {
 
@@ -20,16 +21,19 @@ const SearchPage = () => {
 
   return (
     <>
+    <div className="SearchContainer">
     {
       searchedMovies ? 
 
       searchedMovies.map((item,index)=>(
-        <div key={index}>
-           <Link to={`/${item.id}`} > <img src={`https://image.tmdb.org/t/p/original${item.poster_path}`} width={150} height={200} alt='poster' /> </Link>
+        <div key={index} className="singleItem">
+           <Link to={`/${item.id}`} > <img className="posterImg" src={`https://image.tmdb.org/t/p/original${item.poster_path}`} width={200} height={300} alt='poster' /> </Link>
             <h5> {item.title} </h5>
+            <p> {item.release_date} </p>
         </div>
       )) : <div>Loading... or Movie Not found</div>
     }
+    </div>
     </>
   )
 }
