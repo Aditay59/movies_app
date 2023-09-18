@@ -14,6 +14,11 @@ const HomePage = () => {
     <TodaysTrendingTv />
     <PopularMovies />
     <TopRated />
+
+    <div>
+      <p> © These ratings are according to tmdb not imdb. </p>
+    </div>
+
     </>
   )
 }
