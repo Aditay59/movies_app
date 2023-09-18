@@ -48,20 +48,17 @@ const SinglePageMovie = () => {
 
     const videoRef = useRef(null);
 
-    const pauseVideo = () => {
-      const video = document.querySelector('iframe[src*="youtube.com"]');
-      if(video) {
-        const player = new window.YT.Player(video);
-        player.pauseVideo();
-      }
-    };
-
     const clickHandler = () =>{
       if(isDisplay === true) {
         setisDisplay(false);
-        pauseVideo();
+        const iframe = document.querySelector("#video-trailer");
+        console.log(iframe);
+        iframe.src = "";
       } else {
         setisDisplay(true);
+        const iframe = document.querySelector("#video-trailer");
+        console.log(iframe);
+        iframe.src = `https://www.youtube.com/embed/${Videos}`;
       }
     }
 
@@ -114,7 +111,7 @@ const SinglePageMovie = () => {
 
       <div className="Trailer" onClick={clickHandler} style={{display: isDisplay? 'flex' : 'none'}} >
         <img src={cross} width={80} height={80} alt="cross" className="cross" onClick={clickHandler} />
-          <iframe ref={videoRef} width={800} height={500} src={`https://www.youtube.com/embed/${Videos}`} allowFullScreen></iframe>
+          <iframe id="video-trailer" ref={videoRef} width={800} height={500} src={`https://www.youtube.com/embed/${Videos}`} allow="accelerometer; autoplay;"></iframe>
         </div>
 
       </div>
