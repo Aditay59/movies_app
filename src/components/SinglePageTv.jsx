@@ -47,12 +47,18 @@ export const SinglePageTv = () => {
     }, []);
 
     const clickHandler = () =>{
-        if(isDisplay === true) {
-          setisDisplay(false);
-        } else {
-          setisDisplay(true);
-        }
+      if(isDisplay === true) {
+        setisDisplay(false);
+        const iframe = document.querySelector("#video-trailer");
+        console.log(iframe);
+        iframe.src = "";
+      } else {
+        setisDisplay(true);
+        const iframe = document.querySelector("#video-trailer");
+        console.log(iframe);
+        iframe.src = `https://www.youtube.com/embed/${Videos}`;
       }
+    }
 
     return (
         <>
@@ -101,7 +107,7 @@ export const SinglePageTv = () => {
 
                 <div className="Trailer" onClick={clickHandler} style={{display: isDisplay? 'flex' : 'none'}} >
         <img src={cross} width={80} height={80} alt="cross" className="cross" onClick={clickHandler} />
-          <iframe width={800} height={500} src={`https://www.youtube.com/embed/${Videos}`} allowFullScreen></iframe>
+          <iframe id="video-trailer" width={800} height={500} src={`https://www.youtube.com/embed/${Videos}`} allowFullScreen></iframe>
         </div>
 
                 </div>
