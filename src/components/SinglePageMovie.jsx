@@ -52,12 +52,12 @@ const SinglePageMovie = () => {
       if(isDisplay === true) {
         setisDisplay(false);
         const iframe = document.querySelector("#video-trailer");
-        console.log(iframe);
+        // console.log(iframe);
         iframe.src = "";
       } else {
         setisDisplay(true);
         const iframe = document.querySelector("#video-trailer");
-        console.log(iframe);
+        // console.log(iframe);
         iframe.src = `https://www.youtube.com/embed/${Videos}`;
       }
     }
@@ -79,7 +79,7 @@ const SinglePageMovie = () => {
         <div> 
           {
             Images ? 
-          <img src={`https://www.themoviedb.org/t/p/original/${Images}`} width={400} height={100} /> 
+          <img className="Mlogo" src={`https://www.themoviedb.org/t/p/original/${Images}`}  alt="Mlogo" /> 
           :
           <h2 className="MTitle"> {MovieData.title} </h2>
           }

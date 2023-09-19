@@ -1,0 +1,7 @@
+.Wcontainer {
+    float: right;
+    margin-right: 5px;
+}
+.warning {
+    color: rgba(0,0,0,0.5);
+}

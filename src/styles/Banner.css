@@ -9,6 +9,11 @@ body, html {
   height: 80vh;
 }
 
+.carousel {
+  position: relative;
+  top: 0;
+}
+
 .BannerItem {
   cursor: pointer;
 }
@@ -27,4 +32,10 @@ body, html {
 .BannerItem p {
   font-weight: 400;
   text-shadow: 1px 1px 8px rgba(192, 194, 209, 1),-2px 3px 8px rgba(39, 24, 30, 0.88);
+}
+
+@media screen and (min-width: 200px) and (max-width:767px) {
+ .BannerItem p {
+  display: none;
+ }
 }

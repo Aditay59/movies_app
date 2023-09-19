@@ -4,6 +4,7 @@ import { Carousel } from 'react-bootstrap';
 import '../styles/Banner.css';
 import { Link } from 'react-router-dom';
 
+
 const BannerCrousel = () => {
 
   const [TodaysTrending, setTodaysTrending] = useState(null);
@@ -20,7 +21,7 @@ const BannerCrousel = () => {
 
   return (
     <>
-    <Carousel>
+    <Carousel >
 
       {
         TodaysTrending ? 

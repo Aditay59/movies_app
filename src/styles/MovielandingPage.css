@@ -52,6 +52,11 @@ body {
     border-radius: 5px;
 }
 
+.Mlogo {
+    width: 400px;
+    height: 100px;
+}
+
 .tagline {
     letter-spacing: 5px;
     color: rgb(221, 213, 208);
@@ -95,4 +100,17 @@ body {
     top: 0;
     right: 0;
     cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width:767px) {
+   .Mlogo {
+    width: 200px;
+    height: 60px;
+   }
+   .overview{
+    width: 300px;
+   }
+
 }
