@@ -31,7 +31,7 @@ const SearchPage = () => {
             <h5> {item.title} </h5>
             <p> {item.release_date} </p>
         </div>
-      )) : <div>Loading... or Movie Not found</div>
+      )) : <div className="loader"></div>
     }
     </div>
     </>
