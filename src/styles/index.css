@@ -3,5 +3,6 @@
     margin-right: 5px;
 }
 .warning {
-    color: rgba(0,0,0,0.5);
+    /* color: rgba(0,0,0,0.5); */
+    color: rgb(245, 48, 48);
 }
