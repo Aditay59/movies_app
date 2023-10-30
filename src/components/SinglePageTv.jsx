@@ -113,7 +113,7 @@ export const SinglePageTv = () => {
                 </div>
 
                 :
-                <div>Loading...</div>}
+                <div className="loader"></div>}
 
         </>
     );

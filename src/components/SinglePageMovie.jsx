@@ -116,7 +116,7 @@ const SinglePageMovie = () => {
 
       </div>
     :
-    <div>Loading...</div>
+    <div className="loader"></div>
 
    }
 
